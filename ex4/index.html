@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Christmas Tree</title>
+</head>
+<body>
+  <h2>請打開 Console 看聖誕樹 🌲</h2>
+
+  <script>
+    function repeatchar(n, char) {
+      return char.repeat(n);
+    }
+
+    function printTreeTop(n) {
+      for (let i = 1; i <= n; i++) {
+        let spaces = repeatchar(n - i, ' ');
+        let stars = repeatchar(2 * i - 1, '*');
+        console.log(spaces + stars);
+      }
+    }
+
+    function printTreeBottom(n) {
+      for (let i = 0; i < 3; i++) {
+        let spaces = repeatchar(n - 1, ' ');
+        console.log(spaces + '*');
+      }
+    }
+
+    function tree(n) {
+      printTreeTop(n);
+      printTreeBottom(n);
+    }
+
+    // 執行
+    tree(4);
+  </script>
+</body>
+</html>
